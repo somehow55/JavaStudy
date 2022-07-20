@@ -1,6 +1,5 @@
 package study04_arrayList_HashMap;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class WordDictionary {
