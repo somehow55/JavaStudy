@@ -38,7 +38,7 @@ public class PrimitiveDataType {
 	 */
 	
 	
-	/* 문자열 내장 메소드 */
+	/************ 문자열 내장 메소드 ************/
 	//1. equals
 	//두 개의 문자열이 동일한지를 비교해 결과값을 리턴
 	static String a = "hello";
@@ -127,6 +127,46 @@ public class PrimitiveDataType {
 		System.out.println(result);			//result는 {"a", "b", "c", "d"}		//이대로 출력하면 메모리의 주소값이 나온다 (ex. "[Ljava.lang.String;@7852e922")
 		System.out.println(Arrays.toString(result));		//[a, b, c, d] 출력
 		System.out.println(result[0]);							//a 출력
+		
+		
+		
+		/************ 문자열 포맷 코드 ************/
+			/*
+		 			%s = 문자열 (String)
+		 			%c = 문자 1개 (character)
+		 			%d = 정수 (Integer)
+		 			%f = 부동소수 (floating-point)
+		 			%o = 8진수
+		 			%x = 16진수
+		 			%% = Literal '%' (문자 그 자체)
+			 */
+		
+		/************ 문자열 포맷팅 (String Formatting) ************/
+		
+		
+		// 1. 숫자 바로 대입
+		System.out.println(String.format("I am Number %d", 5));				//"I am Number 5" 출력
+		
+		// 2. 문자열 바로 대입
+		System.out.println(String.format("I am Number %s", "five"));		//"I am Number five" 출력
+		
+		// 3. 숫자값을 나타내는 변수로 대입
+		int number = 5;
+		System.out.println(String.format("I am Number %d", number));		//''I am Number 5" 출력
+		
+		// 4. 두 개 이상의 값 넣기
+		int number1 = 9;
+		String day = "four";
+		
+		System.out.println(String.format("I ate %d bananas. I was sick for %s days", number1, day));		// "I ate 9 bananas. I was sick for four days" 출력
+		
+		
+		// 포맷팅 연산자 '%d'와 '%'를 같이 쓸 때
+//		System.out.println(String.format("The answer is %d%", 64));		// 오류 출력 (UnknownFormatConversionException)
+		System.out.println(String.format("The answer is %d%%", 64));		// "The answer is 64%" 출력
+		
+		
+		
 	}
 	
 	
